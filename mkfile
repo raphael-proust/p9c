@@ -1,6 +1,6 @@
 MKSHELL=$PLAN9/bin/rc
 
-all:V: hello.out
+all:V: hello.out nakedcat.out
 
 %.out: %.c
 	9c -c $stem.c
