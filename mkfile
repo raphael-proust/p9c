@@ -1,8 +1,10 @@
 MKSHELL=$PLAN9/bin/rc
 
-%: %.c
+all:V: hello.out
+
+%.out: %.c
 	9c -c $stem.c
-	9l -o $stem $stem.o
+	9l -o $stem.out $stem.o
 
 clean:V:
-	rm *.o
+	rm *.o *.out
